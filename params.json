@@ -1,0 +1,6 @@
+{
+  "name": "Printing",
+  "tagline": "",
+  "body": "<html>\r\n    <body>\r\n        Enter the height (inches):\r\n        <input type=\"text\" id=\"height\"><br><br>\r\n        Enter the width (inches):  \r\n        <input type=\"text\" id=\"width\"><br><br>\r\n        <form>\r\n            <input type=\"radio\" name=\"paper\" id=\"plain\" value=\".5\">Plain Paper<br>\r\n            <input type=\"radio\" name=\"paper\" id=\"glossy\" value=\"1\">Glossy Paper<br>\r\n        </form>\r\n        <button onclick=\"CostFunction()\">Cost of print</button><br><br>\r\n        Cost:\r\n        <p id=\"FinalCost\"></p>\r\n        <script>\r\n            function CostFunction() {\r\n                var height = Number(document.getElementById(\"height\").value);\r\n                var width = Number(document.getElementById(\"width\").value);\r\n                var paper = Number(document.querySelector('input[name = \"paper\"]:checked').value);\r\n                var cost = height*width/144*paper;\r\n                document.getElementById(\"FinalCost\").innerHTML = cost.toFixed(2) + \"$\";\r\n            }\r\n        </script>\r\n    </body>\r\n</html>\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
